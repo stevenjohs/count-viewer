@@ -14,11 +14,8 @@ function init() {
     time.textContent = `${jam} : ${menit}`;
 
     function updateJlhViewer() {
-        setInterval(() => {
-            fetch('https://api.countapi.xyz/update/stevenjohs/viewcountbystevenjohs/?amount=1').then(res => res.json()).then(res => {
-                jlhViewer.innerHTML = res.value;
-                console.log(res.value);
-            })
-        }, 1000)
+        fetch('https://api.countapi.xyz/update/stevenjohs/viewcountbystevenjohs/?amount=1').then(res => res.json()).then(res => {
+            jlhViewer.innerHTML = res.value;
+        })
     }
 }
