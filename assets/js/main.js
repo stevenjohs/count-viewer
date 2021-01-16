@@ -24,6 +24,7 @@ function init() {
 
     function getJlhViewer() {
         fetch('https://api.countapi.xyz/get/stevenjohs/viewcountbystevenjohs').then(res => res.json()).then(res => {
+            jlhViewer.innerHTML = res.value;
         })
     }
 }
