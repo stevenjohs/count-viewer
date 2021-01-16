@@ -17,13 +17,13 @@ function init() {
     time.textContent = `${jam} : ${menit}`;
 
     function updateJlhViewer() {
-        fetch('https://api.countapi.xyz/update/stevenjohs/viewcountbystevenjohs/?amount=1').then(res => res.json()).then(res => {
+        fetch('https://api.countapi.xyz/update/stevennn/2021/?amount=1').then(res => res.json()).then(res => {
             jlhViewer.innerHTML = res.value;
         })
     }
 
     function getJlhViewer() {
-        fetch('https://api.countapi.xyz/get/stevenjohs/viewcountbystevenjohs').then(res => res.json()).then(res => {
+        fetch('https://api.countapi.xyz/get/stevennn/2021').then(res => res.json()).then(res => {
             jlhViewer.innerHTML = res.value;
         })
     }
