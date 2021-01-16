@@ -2,6 +2,9 @@ window.addEventListener('DOMContentLoaded', init);
 
 function init() {
     updateJlhViewer();
+    setInterval(() => {
+        getJlhViewer();
+    }, 1000)
 
     const nameEl = document.querySelector('.name');
     const jlhViewer = document.querySelector('.jlh-viewer');
@@ -16,6 +19,11 @@ function init() {
     function updateJlhViewer() {
         fetch('https://api.countapi.xyz/update/stevenjohs/viewcountbystevenjohs/?amount=1').then(res => res.json()).then(res => {
             jlhViewer.innerHTML = res.value;
+        })
+    }
+
+    function getJlhViewer() {
+        fetch('https://api.countapi.xyz/get/stevenjohs/viewcountbystevenjohs').then(res => res.json()).then(res => {
         })
     }
 }
